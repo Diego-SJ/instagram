@@ -1,0 +1,154 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway';
+}
+
+*,
+body {
+	font-size: 62.5%;
+}
+
+.instagram-screen {
+	width: 100.8rem;
+	height: 100.8rem;
+	border: 1px solid rgb(230, 230, 230);
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.instagram-screen::after {
+	content: '';
+	position: absolute;
+	width: 3rem;
+	height: 100%;
+	top: 0;
+	left: 0;
+
+	background: linear-gradient(#00ddb5 6.73%, rgba(255, 255, 255, 0) 100%), #ad45ff;
+	box-shadow: 5px 0px 30px 8px rgba(0, 0, 0, 0.14);
+}
+
+.account {
+	margin: 0;
+	padding: 0;
+	width: 35rem;
+	height: 7rem;
+	background: linear-gradient(267.59deg, #00ddb5 6.73%, rgba(255, 255, 255, 0) 100%), #ad45ff;
+	position: absolute;
+	right: 3rem;
+	bottom: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.account-img {
+	width: 7rem;
+	height: 7rem;
+	border-radius: 50rem;
+	position: absolute;
+	left: -3.5rem;
+	top: 0;
+}
+
+.account-name {
+	font-size: 3.6rem;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.button {
+	width: 60rem;
+	height: 10rem;
+	border: none;
+	border-radius: 50rem;
+	outline: none;
+	font-size: 7rem;
+	font-weight: bold;
+	font-family: 'Raleway';
+	background-color: #ad45ff;
+	color: #ffffff;
+	box-shadow: 0 0.1rem 1rem #ae45ff41;
+	transition: all 0.2s ease-in-out;
+	animation: hello 2s ease-in-out;
+	cursor: pointer;
+}
+
+.button:hover {
+	color: #ad45ff;
+	background-color: #ffffff;
+	transform: translateY(-0.3rem);
+}
+
+.button:focus {
+	opacity: 0;
+	animation: goodbye 2s;
+}
+
+@keyframes hello {
+	0% {
+		opacity: 0;
+		transform: translateY(-50rem);
+		width: 10rem;
+		color: transparent;
+	}
+
+	33% {
+		opacity: 1;
+		transform: translateY(10rem) scale(0.5);
+		width: 10rem;
+	}
+
+	66% {
+		transform: translateY(0) scale(1);
+		width: 10rem;
+		color: transparent;
+	}
+
+	80% {
+		width: 50rem;
+		color: transparent;
+	}
+
+	100% {
+		transform: translateY(0);
+		width: 60rem;
+		color: #ffffff;
+	}
+}
+
+@keyframes goodbye {
+	0% {
+		opacity: 1;
+		color: transparent;
+		width: 60rem;
+		background: #ffffff;
+		transform: translateY(0) scale(1);
+	}
+
+	33% {
+		width: 10rem;
+		background: #ad45ff;
+		transform: translateY(0) scale(0.5);
+	}
+
+	66% {
+		opacity: 1;
+		transform: translateY(10rem) scale(1);
+	}
+
+	100% {
+		opacity: 0;
+		width: 10rem;
+		color: transparent;
+		transform: translateY(-50rem);
+	}
+}
